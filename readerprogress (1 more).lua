@@ -104,7 +104,7 @@ function ReaderProgress:getStatusContent(width)
         align = "left",
         title_bar,
         self:genSingleHeader(_("Reading Summary")),
-        self:genSummaryWeek(width),
+        self:genSummaryStats(width),
         self:genSingleHeader(_("Last week")),
         self:genSummaryWeek(width),
         self:genSingleHeader(_("Week progress")),
@@ -368,6 +368,7 @@ function ReaderProgress:genSummaryStats(width)
         dimen = Geom:new{ w = self.screen_width, h = math.floor(self.screen_height * 0.20) },
         statistics_container,
     }
+
 end
 -------------------------------------------
 function ReaderProgress:genWeekStats(stats_day)
